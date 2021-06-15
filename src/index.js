@@ -1,17 +1,29 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from 'react'
+import ReactDom from 'react-dom'
+import GameList from './GameList'
+import UseStateBasics from './UseStateBasics'
+import UseEffectsBasics from './UseEffectsBasics'
+import { useState } from 'react'
+import ControlledInput from './controlledInput'
+import './index.css' 
+import reactDom from 'react-dom'
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+function GamesList(){
+  const [showGithubUsers,setGithubUsers] = useState(true)
+  const showUsers = "show users"
+  const hideUsers = "hide Users"
+  return (
+    <>
+    <GameList/>
+    <div className="center-div">
+      <button className="btn" onClick={()=>{setGithubUsers(!showGithubUsers)}}>{showGithubUsers?hideUsers :showUsers }</button>
+    </div>
+    {showGithubUsers && <UseEffectsBasics/>}
+    <ControlledInput/>
+    <UseStateBasics/>
+    </>
+  );
+}
+
+ReactDom.render(<GamesList/>,document.getElementById('root'))

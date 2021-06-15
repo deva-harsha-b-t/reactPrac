@@ -1,13 +1,180 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+}
+@media screen and (min-width: 768px) {
+  .games-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .ul-column4 {
+    column-count: 1;
+  }
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background: rgb(37, 42, 46);
+  color: white;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.games-list {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid;
+  display: grid;
+  margin-top: 10px;
+  margin-right: 10px;
+  margin-bottom: 50px;
+  gap: 2em;
+}
+
+.game {
+  background: #000000;
+  border-radius: 8px;
+  padding: 8px 4px 8px 16px;
+}
+
+.game:hover {
+  background: #1a1919;
+}
+
+.btn {
+  color: #ffffff;
+  background: #00000000;
+  border: 3px solid rgb(81, 195, 230);
+  width: 400px;
+  height: 30px;
+  border-radius: 20px;
+  margin-top: 1.5rem;
+}
+
+.btn:hover {
+  background: rgb(81, 195, 230);
+  color: #000000;
+}
+
+.btn:active {
+  background: rgb(113, 178, 197);
+}
+
+.img-center {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 50px;
+}
+.grid-item {
+  display: flex;
+  border-radius: 4rem;
+  border: 2px solid #00b7ff;
+
+  text-align: center;
+  height: 4.5rem;
+  justify-content: flex-start;
+  align-items: center;
+}
+.grid-item:hover {
+  border-radius: 20px;
+  border: 2px solid #00ff73;
+}
+.img-user {
+  border: 1px solid #ff0b0b;
+  height: 4rem;
+  margin-left: 2rem;
+  border-radius: 50%;
+}
+.counter {
+  display: flex;
+  border: 8px solid red;
+  flex-direction: column;
+  border-radius: 5px;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 8px 20px 8px;
+}
+.center-div {
+  display: flex;
+  justify-content: center;
+}
+.form-container {
+  background: #2d3b44;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 8px 4px 8px;
+  margin: 20px 8px 20px 8px;
+}
+.input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border-radius: 5px;
+  transition: 0.2s;
+  border: 1px solid #555;
+  outline: none;
+  font-size: large;
+}
+.input:focus {
+  border: 3px solid #00b7ff;
+}
+.form-controller {
+  width: 100%;
+  margin-top: 6px;
+}
+.all-users {
+  display: flex;
+  background-color: #32393b;
+  padding: 20px 8px 20px 8px;
+  margin: 10px 8px 10px 8px;
+}
+
+.each-user {
+  display: flex;
+  border-radius: 4rem;
+  border: 2px solid #00b7ff;
+  flex-direction: column;
+  text-align: center;
+  height: 4.5rem;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 16px;
+}
+.each-user:hover {
+  border-radius: 20px;
+  border: 2px solid #00ff73;
+}
+
+.btn1 {
+  color: #ffffff;
+  background: #00000000;
+  border: 3px solid rgb(81, 195, 230);
+  width: 400px;
+  height: 30px;
+  border-radius: 20px;
+  margin-top: 1.5rem;
+}
+
+.btn1:hover {
+  background: rgb(81, 195, 230);
+  color: #000000;
+  cursor: pointer;
+}
+
+.btn1:active {
+  background: rgb(113, 178, 197);
 }
