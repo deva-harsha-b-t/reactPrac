@@ -178,3 +178,15 @@ body {
 .btn1:active {
   background: rgb(113, 178, 197);
 }
+
+.popup-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.popup {
+  padding: 8px;
+  border: 2px solid green;
+  margin-top: 16px;
+  margin-bottom: 8dp;
+}

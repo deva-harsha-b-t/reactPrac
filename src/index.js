@@ -6,8 +6,6 @@ import UseEffectsBasics from './UseEffectsBasics'
 import { useState } from 'react'
 import ControlledInput from './controlledInput'
 import './index.css' 
-import reactDom from 'react-dom'
-
 
 function GamesList(){
   const [showGithubUsers,setGithubUsers] = useState(true)
@@ -16,6 +14,7 @@ function GamesList(){
   return (
     <>
     <GameList/>
+    
     <div className="center-div">
       <button className="btn" onClick={()=>{setGithubUsers(!showGithubUsers)}}>{showGithubUsers?hideUsers :showUsers }</button>
     </div>
