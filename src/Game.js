@@ -4,7 +4,7 @@ const Game = (props) =>{
   }
   const {img , title , NameCom, link} = props.gameData
   return (
-    <a href={link}>
+    <a className='a-game' href={link}>
       <article className = "game" onClick={clickGoToGameSite}>
       <MainTitle value = {title}/>
       <MainImage value = {img}/>

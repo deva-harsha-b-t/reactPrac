@@ -190,3 +190,36 @@ body {
   margin-top: 16px;
   margin-bottom: 8dp;
 }
+nav {
+  background: #000000;
+}
+.nav-bar {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0.5rem 0 0.5rem 1rem;
+}
+ul {
+  list-style-type: none;
+}
+.a-game {
+  text-decoration: none;
+  color: #ffffff;
+}
+.nav-item {
+  color: rgb(255, 255, 255);
+  font-size: 1.5rem;
+  border: 2px solid #42cef8;
+  border-radius: 3px;
+  margin-right: 0.5rem;
+  padding: 0.25rem;
+  text-decoration: none;
+}
+
+.nav-item:hover {
+  background-color: #5fe4fc;
+  color: #000000;
+}
+.nav-item:active {
+  background-color: #8acbd6;
+}

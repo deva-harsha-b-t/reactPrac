@@ -5,6 +5,8 @@ import UseStateBasics from './UseStateBasics'
 import UseEffectsBasics from './UseEffectsBasics'
 import { useState } from 'react'
 import ControlledInput from './controlledInput'
+import { BrowserRouter as Router , Route , Switch } from 'react-router-dom'
+import Navbar from './Navbar'
 import './index.css' 
 
 function GamesList(){
@@ -13,14 +15,28 @@ function GamesList(){
   const hideUsers = "hide Users"
   return (
     <>
-    <GameList/>
-    
-    <div className="center-div">
-      <button className="btn" onClick={()=>{setGithubUsers(!showGithubUsers)}}>{showGithubUsers?hideUsers :showUsers }</button>
-    </div>
-    {showGithubUsers && <UseEffectsBasics/>}
-    <ControlledInput/>
-    <UseStateBasics/>
+    <Router>
+      <Navbar/>
+      <Route exact path='/'>
+       <GameList/>
+      </Route>
+      <Route exact path='/users'>
+        <div className="center-div">
+            <button className="btn" onClick={()=>{setGithubUsers(!showGithubUsers)}}>{showGithubUsers?hideUsers :showUsers }</button>
+        </div>
+        {showGithubUsers && <UseEffectsBasics/>}
+        </Route>
+        <Route exact path='/adduser'>
+          <ControlledInput/>
+        </Route>
+        <Route exact path='/messages'>
+          <UseStateBasics/>
+        </Route>
+          
+        
+    </Router>
+
+
     </>
   );
 }
