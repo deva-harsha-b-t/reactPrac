@@ -5,6 +5,7 @@ import UseStateBasics from './UseStateBasics'
 import UseEffectsBasics from './UseEffectsBasics'
 import { useState } from 'react'
 import ControlledInput from './controlledInput'
+import Userdetails from './Userdetails'
 import { BrowserRouter as Router , Route , Switch } from 'react-router-dom'
 import Navbar from './Navbar'
 import './index.css' 
@@ -31,6 +32,9 @@ function GamesList(){
         </Route>
         <Route exact path='/messages'>
           <UseStateBasics/>
+        </Route>
+        <Route exact path="/users/:login" children={<Userdetails/>}>
+
         </Route>
           
         

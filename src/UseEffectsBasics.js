@@ -1,4 +1,5 @@
 import React,{useState,useEffect} from 'react'
+import {Link} from 'react-router-dom'
 const url = "https://api.github.com/users"
 
 const UseEffectsBascis = () => {
@@ -18,10 +19,14 @@ const UseEffectsBascis = () => {
                 {users.map((user)=>{
                 const {id,login,avatar_url} = user;
                 return(
-                    <span key={id} className="grid-item">
-                        <img src={avatar_url} className="img-user"/>
-                        <h4 style={{marginInlineStart:"10px"}}>{login}</h4>
+                    <Link style ={{textDecoration:'none',color:'white'}} to={`/users/${login}`}>
+                        <span key={id} className="grid-item">
+                            <img src={avatar_url} className="img-user"/>
+                            <h4 style={{marginInlineStart:"10px"}}>{login}</h4>
                         </span>
+
+                    </Link>
+
                 ); 
             })}
 
